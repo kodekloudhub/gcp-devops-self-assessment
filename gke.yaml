@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gcp-devops-gke
+sepc:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gcp
+  template:
+    metadata: 
+      labels:
+        app: gcp
+    spec:
+      containers:
+      - name: gcp-devops-gke
+        image: gcr.io/qwiklabs-gcp-01-c7b88bdef9fd/gcpdevops:latest
+        ports:
+        - containerPort: 5000
+        env:
+          - name: PORT
+            value: "5000"
+            
