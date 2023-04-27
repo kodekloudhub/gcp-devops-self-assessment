@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gcp-devops-assessment
+  namespace: prod
+  labels:
+    app: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gcp
+  template:
+    metadata:
+      labels:
+        app: gcp
+    spec:
+      containers:
+      - name: gcp-devops-assessment
+        image: gcr.io/teak-cyclist-383810/gcp-devops-assessment
+        ports:
+        - containerPort: 5000
+        env:
+        - name: PORT
+          value: "5000"
