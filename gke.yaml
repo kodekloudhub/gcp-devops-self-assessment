@@ -21,7 +21,6 @@ spec:
          - name: PORT
            value: "5000"
 ---
-
 apiVersion:: "v1"
 kind: "Service"
 metadata:
