@@ -14,4 +14,4 @@ steps:
   - --location=us-central1-c
   - --cluster=cluster1
   - --namespace=gcp-devops-test
-
+  
