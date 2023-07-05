@@ -7,4 +7,10 @@ steps:
   args: ["push", "gcr.io/$PROJECT_ID/gcpdevops"]
   # deploy cotainer image to GKE
 - name: "gcr.io/example-voting-app-352514/gcpdevops"
-  CMD ["run", "--filename=gke.yaml", "--image=gcr.io/$PROJECT_ID/gcpdevops", "--location=us-central1-c", "--cluster=gke-gcp-devops", "--namespace=gcp-devops-prod"]
+  args:
+    - CMD "run"
+    - --filename=gke.yaml
+    - --image=gcr.io/$PROJECT_ID/gcpdevops
+    - --location=us-central1-c
+    - --cluster=gke-gcp-devops
+    - --namespace=gcp-devops-prod
