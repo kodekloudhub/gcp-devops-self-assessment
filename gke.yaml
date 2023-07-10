@@ -28,11 +28,11 @@ metadata:
   namespace: "default"
   labels:
     app.kubernetes.io/managed-by: "gcp-cloud-build-deploy"
-    spec:
-      ports:
-      - protocol: "TCP"
-        port: 80
-        targetPort: 5000
-      selector:
-        app: "gcp"
-      type: "LoadBalancer" 
+spec:
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 5000
+  selector:
+    app: "gcp"
+  type: "LoadBalancer" 
