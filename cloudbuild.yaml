@@ -6,7 +6,7 @@ steps:
 - name: "gcr.io/cloud-builders/docker"
   args: ["push", "gcr.io/$PROJECT_ID/gcpdevops"]
   # deploy cotainer image to GKE
-- name: "gcr.io/example-voting-app-352514/gcpdevops:latest"
+- name: "gcr.io/example-voting-app-352514/gke-deploy"
   args:
     - run
     - --filename=gke.yaml
