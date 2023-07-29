@@ -1,2 +1,2 @@
-# The GCP DevOps Course
-These are notes from the GCP DevOps Course hosted on KodeKloud.
+# The GCP DevOps Practice project
+These is a practice of hosting a flask project on GCP
